@@ -2,4 +2,4 @@ res://Assets/Scenes/throne_room.tscn
 res://Dialogues/dialogue_box.tscn
 res://Assets/Scenes/player.tscn
 res://Assets/Scenes/swash_sword.tscn
-res://Assets/Scenes/swash_sword.gd
+res://Dialogues/json/gorp_intro.json
