@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Severed"
-run/main_scene="res://throne_room.tscn"
+run/main_scene="res://Assets/Scenes/throne_room.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1024
+window/stretch/mode="canvas_items"
 
 [input]
 
@@ -41,3 +46,7 @@ d={
 [layer_names]
 
 2d_physics/layer_11="Actionable"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

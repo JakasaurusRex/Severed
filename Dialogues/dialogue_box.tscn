@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://myohlolhs2x"]
+
+[ext_resource type="Texture2D" uid="uid://ds6m7gsmii34h" path="res://Art/chatbox.png" id="1_3hsr0"]
+[ext_resource type="Script" path="res://Dialogues/DialoguePlayer.gd" id="1_dkq0f"]
+
+[node name="Dialogue Box" type="CanvasLayer"]
+script = ExtResource("1_dkq0f")
+d_value = "res://Dialogues/json/gorp_intro.json"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 465.0
+offset_right = 146.0
+offset_bottom = 505.0
+scale = Vector2(20.6147, 3.51497)
+texture = ExtResource("1_3hsr0")
+region_rect = Rect2(0.142113, 0.0785675, 31.7162, 31.7162)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
+offset_left = 155.0
+offset_top = 470.0
+offset_right = 485.0
+offset_bottom = 510.0
+scale = Vector2(2.14, 2.14)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Name"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 514.0
+offset_right = 685.04
+offset_bottom = 560.295
+scale = Vector2(1.385, 1.385)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Chat Text
+"
