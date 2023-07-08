@@ -1,18 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://cso72pub2o58x"]
+[gd_scene load_steps=7 format=3 uid="uid://cso72pub2o58x"]
 
 [ext_resource type="Script" path="res://PlayerMovement.gd" id="1_viorm"]
 [ext_resource type="Texture2D" uid="uid://dbsikifpheisi" path="res://icon.svg" id="2_mvc6l"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6gj6"]
+size = Vector2(124, 120)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5w7sf"]
+radius = 35.0
+height = 72.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2efur"]
+size = Vector2(40, 40)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4kybu"]
+radius = 19.0
+height = 54.0
+
 [node name="Throne Room" type="Node2D"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 646.0
 color = Color(0, 0.0784314, 0.243137, 1)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(559, 249)
 script = ExtResource("1_viorm")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("2_mvc6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_x6gj6")
+
+[node name="Area2D" type="Area2D" parent="Player"]
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2(0, 99)
+shape = SubResource("CapsuleShape2D_5w7sf")
+
+[node name="Goldfish" type="StaticBody2D" parent="."]
+position = Vector2(1023, 249)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goldfish"]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_2efur")
+
+[node name="ColorRect" type="ColorRect" parent="Goldfish"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Area2D" type="Area2D" parent="Goldfish"]
+collision_layer = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goldfish/Area2D"]
+position = Vector2(-19, 20)
+shape = SubResource("CapsuleShape2D_4kybu")

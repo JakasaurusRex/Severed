@@ -1,3 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1688787398
+::res://::1688793042
 icon.svg::CompressedTexture2D::7267113716773468220::1688787187::1688787200::1::::<><>::
+PlayerMovement.gd::GDScript::-1::1688787873::0::1::::<>CharacterBody2D<>::
+throne_room.tscn::PackedScene::6067133820460023985::1688787944::0::1::::<><>::res://PlayerMovement.gd<>uid://dbsikifpheisi::::res://icon.svg
