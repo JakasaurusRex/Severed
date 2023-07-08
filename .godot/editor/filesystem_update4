@@ -1,6 +1,5 @@
-res://PlayerMovement.gd
-res://throne_room.tscn
-res://Dialogues/dialogue_box.tscn
-res://Dialogues/DialoguePlayer.gd
 res://Assets/Scenes/throne_room.tscn
-res://Assets/Scripts/PlayerMovement.gd
+res://Dialogues/dialogue_box.tscn
+res://Assets/Scenes/player.tscn
+res://Assets/Scenes/swash_sword.tscn
+res://Assets/Scenes/swash_sword.gd

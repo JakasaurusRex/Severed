@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://caulvx0mw6vna"]
+
+[ext_resource type="Script" path="res://Assets/Scenes/swash_sword.gd" id="1_atfs5"]
+[ext_resource type="Texture2D" uid="uid://cg5mjmqypmhmd" path="res://Assets/Sprites/temp_swashbuckle.png" id="1_t5cfv"]
+
+[node name="Swash Sword" type="Node2D"]
+position = Vector2(339, 171)
+script = ExtResource("1_atfs5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t5cfv")
