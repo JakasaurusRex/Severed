@@ -10,10 +10,6 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_broad_cast_timer_timeout():
-	for dude in get_tree().get_nodes_in_group("seeking_enemy"):
-		dude.updateTarget($Player.position)
-
 
 func _on_door_scene_door():
 	emit_signal("door")

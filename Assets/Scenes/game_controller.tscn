@@ -1,12 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://qjjonjgckrhd"]
+[gd_scene load_steps=3 format=3 uid="uid://qjjonjgckrhd"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/game_controller.gd" id="1_k08tt"]
 [ext_resource type="PackedScene" uid="uid://cso72pub2o58x" path="res://Assets/Scenes/throne_room.tscn" id="2_twtm1"]
-[ext_resource type="PackedScene" uid="uid://dcw0sd0gi0w7a" path="res://Assets/Scenes/level_template.tscn" id="2_xq08u"]
 
 [node name="game_controller" type="Node2D"]
 script = ExtResource("1_k08tt")
-
-[node name="level_template" parent="." instance=ExtResource("2_xq08u")]
 
 [node name="Throne Room" parent="." instance=ExtResource("2_twtm1")]
