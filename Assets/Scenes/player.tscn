@@ -39,4 +39,9 @@ debug_color = Color(0.92549, 0.180392, 0.517647, 0.419608)
 
 [node name="AbilityTimer" type="Timer" parent="."]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
 [connection signal="area_entered" from="playerHitboxArea" to="." method="_on_player_area_area_entered"]
