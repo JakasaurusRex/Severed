@@ -82,12 +82,13 @@ radius = 25.0
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_dr1u2")
+state = 3
 
 [node name="enemySprite" type="Sprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_c5l1y")
 hframes = 6
-frame = 2
+frame = 5
 
 [node name="enemyAnim" type="AnimationPlayer" parent="."]
 libraries = {
@@ -107,6 +108,8 @@ position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_h1jkx")
 
 [node name="enemyNav" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 50.0
 
 [node name="hitbox" type="Area2D" parent="."]
 position = Vector2(31, 0)

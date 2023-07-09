@@ -9,7 +9,7 @@ class_name defaultEnemy
 @onready var sprite = $enemySprite
 @onready var anim = $enemyAnim
 @onready var trigger_dist = 300
-@onready var attack_dist = 50
+@onready var attack_dist = 75
 @onready var hit_damage = 10
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
