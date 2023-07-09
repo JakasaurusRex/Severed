@@ -82,12 +82,13 @@ radius = 25.0
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_dr1u2")
+state = 3
 
 [node name="enemySprite" type="Sprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_c5l1y")
 hframes = 6
-frame = 2
+frame = 5
 
 [node name="enemyAnim" type="AnimationPlayer" parent="."]
 libraries = {

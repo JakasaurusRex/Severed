@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctawvbibm4mnc"]
+
+[ext_resource type="Texture2D" uid="uid://dql8jsfnaesc4" path="res://Art/goldfish_throne/fishtank-Sheet.png" id="1_0jcsc"]
+[ext_resource type="Script" path="res://Assets/Scripts/goldfish_throne.gd" id="1_nibvs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2efur"]
+size = Vector2(40, 40)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4kybu"]
+radius = 19.0
+height = 54.0
+
+[sub_resource type="Animation" id="Animation_udim6"]
+resource_name = "glub"
+length = 1.31
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7uh8a"]
+_data = {
+"glub": SubResource("Animation_udim6")
+}
+
+[node name="Goldfish" type="StaticBody2D"]
+position = Vector2(940, 257)
+script = ExtResource("1_nibvs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_2efur")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-19, 20)
+shape = SubResource("CapsuleShape2D_4kybu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(19, 9)
+texture = ExtResource("1_0jcsc")
+hframes = 14
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7uh8a")
+}
