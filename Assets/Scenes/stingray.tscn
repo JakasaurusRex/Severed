@@ -92,13 +92,14 @@ shape = SubResource("CircleShape2D_egqc7")
 disabled = true
 
 [node name="enemyHurt" type="Area2D" parent="."]
-position = Vector2(-6, -5)
-monitoring = false
-monitorable = false
+position = Vector2(-6, -4.66667)
+collision_layer = 0
+collision_mask = 16
 
 [node name="enemyHurtCollider" type="CollisionShape2D" parent="enemyHurt"]
 position = Vector2(5, 4)
 shape = SubResource("CircleShape2D_h1jkx")
+debug_color = Color(0.85098, 0, 0.901961, 0.419608)
 
 [node name="hitbox" type="Area2D" parent="."]
 position = Vector2(31, 0)
@@ -117,3 +118,5 @@ debug_color = Color(0.988235, 0, 0.317647, 0.419608)
 libraries = {
 "": SubResource("AnimationLibrary_txwwm")
 }
+
+[connection signal="area_entered" from="enemyHurt" to="." method="_on_enemy_hurt_area_entered"]

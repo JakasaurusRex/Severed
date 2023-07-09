@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ck2sbtbp5bb"]
+[gd_scene load_steps=7 format=3 uid="uid://dcdll7t6pbapa"]
 
 [ext_resource type="Texture2D" uid="uid://vtnb3t6jaqwg" path="res://Asperite FIles/temp_swashbuckle.png" id="2_8rg2j"]
 [ext_resource type="Script" path="res://Assets/Scripts/default_weapon.gd" id="2_243fo"]
@@ -37,7 +37,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("weaponHitbox:position")
+tracks/2/path = NodePath("hitbox:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -61,7 +61,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("weaponHitbox/hitboxShape:disabled")
+tracks/4/path = NodePath("hitbox/hitboxShape:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -70,23 +70,10 @@ tracks/4/keys = {
 "update": 1,
 "values": [false, true]
 }
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("weaponAnim")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["", -1, 1.0, false],
-"method": &"recover"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_ywg5q"]
 resource_name = "recover"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -94,19 +81,15 @@ tracks/0/path = NodePath(".:state")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [2, 0]
+"values": [0]
 }
-
-[sub_resource type="Animation" id="Animation_dvdg6"]
-resource_name = "idle"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qnkfu"]
 _data = {
 "attack": SubResource("Animation_s0ym5"),
-"idle": SubResource("Animation_dvdg6"),
 "recover": SubResource("Animation_ywg5q")
 }
 
@@ -120,8 +103,8 @@ offset = Vector2(30, 0)
 
 [node name="weaponHitbox" type="Area2D" parent="."]
 position = Vector2(30, 0)
-collision_layer = 0
-collision_mask = 8
+collision_layer = 16
+collision_mask = 16
 
 [node name="hitboxShape" type="CollisionShape2D" parent="weaponHitbox"]
 rotation = 1.5708

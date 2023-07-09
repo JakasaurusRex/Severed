@@ -6,7 +6,8 @@ var lifetime = 3
 var hit = 10
 #var 
 
-func initialize(d, s, l, h):
+func initialize(pos, d, s, l, h):
+	position = pos
 	dir = d
 	speed = s
 	lifetime = l

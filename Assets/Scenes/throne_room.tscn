@@ -3,11 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dra0o0sl5c388" path="res://Art/tiles/all_tiles_sheet.png" id="1_6n4ss"]
 [ext_resource type="Script" path="res://Assets/Scripts/throne_room.gd" id="1_cqkoi"]
 [ext_resource type="PackedScene" uid="uid://dq88jq4x5vpv2" path="res://Assets/Scenes/player.tscn" id="3_p5hly"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/goldfish.tscn" id="3_ttoxo"]
+[ext_resource type="PackedScene" uid="uid://ctawvbibm4mnc" path="res://Assets/Scenes/goldfish.tscn" id="3_ttoxo"]
 [ext_resource type="Texture2D" uid="uid://b0kw0he8ut7i8" path="res://Assets/Sprites/throne.png" id="3_x408e"]
 [ext_resource type="PackedScene" uid="uid://cnoxnuahmblih" path="res://Assets/Scenes/default_enemy.tscn" id="4_2x2gb"]
-[ext_resource type="PackedScene" uid="uid://cjadelr6xafw3" path="res://Assets/Scenes/sea_horse.tscn" id="6_64tnb"]
-[ext_resource type="PackedScene" path="res://Assets/Scenes/stingray.tscn" id="7_1ff7y"]
+[ext_resource type="PackedScene" uid="uid://ck7e04ajx3c5c" path="res://Assets/Scenes/sea_horse.tscn" id="6_64tnb"]
+[ext_resource type="PackedScene" uid="uid://geci3vpiuydq" path="res://Assets/Scenes/stingray.tscn" id="7_1ff7y"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_xa3im"]
 vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)

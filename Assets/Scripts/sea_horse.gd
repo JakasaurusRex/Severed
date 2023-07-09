@@ -16,7 +16,7 @@ func shootBubbles():
 		bub_angle = deg_to_rad(bub_angle)
 		
 		var bub_dir = (nav_agent.target_position - position)
-		new_bubble.initialize(bub_dir.rotated(bub_angle).normalized(), 100, 2, hit_damage)
-		add_child(new_bubble)
+		new_bubble.initialize(position, bub_dir.rotated(bub_angle).normalized(), 100, 2, hit_damage)
+		get_parent().add_child(new_bubble)
 
 

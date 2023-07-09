@@ -11,6 +11,8 @@ class_name defaultEnemy
 @onready var trigger_dist = 300
 @onready var attack_dist = 75
 @onready var hit_damage = 10
+@onready var hp = 50
+@onready var drag = 2000
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -48,3 +50,16 @@ func updateTarget(pos):
 	nav_agent.target_position = pos
 func hitAttack():
 	return hit_damage
+
+
+func _on_enemy_hurt_area_entered(area):
+	print("IN BROADCAST")
+	var parent = area.get_parent()
+	hp -= parent.enemyHit()
+	if(parent.has_method("drag")):
+		velocity += (parent.position - position).normalized() * drag
+		print(velocity)
+	print("hp = " + str(hp))
+	if(hp <= 0):
+		queue_free()
+	

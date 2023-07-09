@@ -3,6 +3,7 @@ extends Node2D
 @export var state = 0 #IDLE - 0, ATTACKING - 1, RECOVER - 2
 @export var attack_angle = -45
 @export var attack_start_angle = 0
+@onready var damage = 10
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,7 +11,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(state)
 	#print(state)
 	#print(attack_start_angle)
 	match state:
@@ -24,7 +24,6 @@ func idle():
 	$weaponAnim.play('idle')
 func attack():
 	
-	print("ATTACKING")
 	#print("%s,%s" % [attack_start_angle, attack_angle])
 	if state == 0:
 		state = 1
@@ -37,4 +36,7 @@ func recover():
 func setAttackAngle():
 	attack_start_angle = rad_to_deg((get_global_mouse_position()-global_position).angle())
 	print(attack_start_angle)
+	
+func enemyHit():
+	return damage
 	

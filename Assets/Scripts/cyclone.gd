@@ -26,5 +26,8 @@ func _on_timer_timeout():
 	queue_free()
 
 func enemyHit():
-	queue_free()
+	$Timer.start(2)
 	return hit
+
+func drag():
+	pass
