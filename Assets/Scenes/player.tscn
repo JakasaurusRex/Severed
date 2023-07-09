@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerMovement.gd" id="1_fr0if"]
 [ext_resource type="Texture2D" uid="uid://ctn5dr7wrtf0u" path="res://Assets/Sprites/temp_boss_smowl.png" id="2_6i64d"]
-[ext_resource type="PackedScene" uid="uid://ck2sbtbp5bb" path="res://Assets/Scenes/default_weapon.tscn" id="3_f3cju"]
+[ext_resource type="PackedScene" path="res://Assets/Scenes/default_weapon.tscn" id="3_f3cju"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8p0b"]
 radius = 31.0
@@ -40,5 +40,7 @@ debug_color = Color(0.92549, 0.180392, 0.517647, 0.419608)
 
 [node name="wep" parent="." instance=ExtResource("3_f3cju")]
 position = Vector2(35, 19)
+
+[node name="AbilityTimer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="playerHitboxArea" to="." method="_on_player_area_area_entered"]

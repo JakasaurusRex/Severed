@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var speed = 300
 @onready var hp = 200
 var pickup = 0
+@onready var cyclone = preload("res://Assets/Scenes/cyclone.tscn")
+@onready var currentPowers = ["cyclone"]
 
 func get_input():
 	var input_direction = Input.get_vector("a", "d", "w", "s")
@@ -31,3 +33,14 @@ func _on_player_area_area_entered(area):
 func _input(event):
 	if event.is_action("Attack"):
 		$wep.attack()
+	elif event.is_action("Ability 1"):
+		if(currentPowers.has("cyclone") and $AbilityTimer.is_stopped()):
+			shootCyclone()
+			$AbilityTimer.start(5)
+			$AbilityTimer.one_shot = true
+
+
+func shootCyclone():
+	var new_cyclone = cyclone.instantiate()
+	new_cyclone.initialize(position, (get_global_mouse_position() - position).normalized(), 100, 5, 20)
+	get_parent().add_child(new_cyclone)

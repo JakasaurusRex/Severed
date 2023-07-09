@@ -8,8 +8,8 @@ radius = 27.0
 height = 76.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88ggf"]
-radius = 27.0
-height = 76.0
+radius = 57.0
+height = 142.0
 
 [sub_resource type="Animation" id="Animation_lr7kb"]
 resource_name = "spin"
@@ -44,6 +44,7 @@ frame = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_bpgxy")
+disabled = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -58,3 +59,5 @@ debug_color = Color(0.972549, 0.141176, 0.227451, 0.419608)
 libraries = {
 "": SubResource("AnimationLibrary_3t0n5")
 }
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
