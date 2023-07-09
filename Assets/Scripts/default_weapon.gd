@@ -31,7 +31,6 @@ func attack():
 		setAttackAngle()
 		$weaponAnim.play('attack')
 	rotation = deg_to_rad(attack_start_angle + attack_angle)
-	#print(rotation)
 func recover():
 	look_at(get_global_mouse_position())
 	$weaponAnim.play("recover")
