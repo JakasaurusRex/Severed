@@ -1,100 +1,117 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck2sbtbp5bb"]
+[gd_scene load_steps=7 format=3 uid="uid://ck2sbtbp5bb"]
 
-[ext_resource type="Texture2D" uid="uid://cg5mjmqypmhmd" path="res://Assets/Sprites/temp_swashbuckle.png" id="1_d5g01"]
+[ext_resource type="Texture2D" uid="uid://vtnb3t6jaqwg" path="res://Asperite FIles/temp_swashbuckle.png" id="2_8rg2j"]
 [ext_resource type="Script" path="res://Assets/Scripts/default_weapon.gd" id="2_243fo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ldig0"]
 height = 84.0
 
-[sub_resource type="Animation" id="Animation_0m03m"]
+[sub_resource type="Animation" id="Animation_s0ym5"]
 resource_name = "attack"
+length = 0.5
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
+tracks/0/path = NodePath(".:attack_angle")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.7, 1),
-"transitions": PackedFloat32Array(1, 1.61, 1, 1),
+"times": PackedFloat32Array(0, 0.15, 0.35, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, -30), Vector2(0, -80), Vector2(0, -80), Vector2(0, -30)]
+"values": [0, -45, 45, 0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../hitbox:position")
+tracks/1/path = NodePath(".:state")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.7, 1),
-"transitions": PackedFloat32Array(1, 1.61, 1, 1),
-"update": 0,
-"values": [Vector2(0, -19), Vector2(0, -69), Vector2(0, -69), Vector2(0, -19)]
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("..:rotation")
+tracks/2/path = NodePath("hitbox:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.7, 1),
+"times": PackedFloat32Array(0, 0.15, 0.35, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [-0.785398, -0.785398, 0.785398, 0.0]
+"values": [Vector2(30, 0), Vector2(80, 0), Vector2(80, 0), Vector2(30, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../hitbox/hitboxShape:disabled")
+tracks/3/path = NodePath("default_weapon:offset")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
+"times": PackedFloat32Array(0, 0.15, 0.35, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(30, 0), Vector2(80, 0), Vector2(80, 0), Vector2(30, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("..:state")
+tracks/4/path = NodePath("hitbox/hitboxShape:disabled")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [1, 0]
+"values": [false, true]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6yt0k"]
+[sub_resource type="Animation" id="Animation_ywg5q"]
+resource_name = "recover"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:state")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qnkfu"]
 _data = {
-"attack": SubResource("Animation_0m03m")
+"attack": SubResource("Animation_s0ym5"),
+"recover": SubResource("Animation_ywg5q")
 }
 
 [node name="def" type="Node2D"]
 script = ExtResource("2_243fo")
+attack_angle = -14
 
 [node name="default_weapon" type="Sprite2D" parent="."]
-position = Vector2(0, -19)
-texture = ExtResource("1_d5g01")
-offset = Vector2(0, -30)
+texture = ExtResource("2_8rg2j")
+offset = Vector2(46.6667, 0)
 
 [node name="hitbox" type="Area2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(46.6667, 0)
 collision_layer = 0
 collision_mask = 8
 
 [node name="hitboxShape" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -30)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ldig0")
-disabled = true
 debug_color = Color(1, 0.00392157, 0.0745098, 0.419608)
 
 [node name="weaponAnim" type="AnimationPlayer" parent="."]
-root_node = NodePath("../default_weapon")
 libraries = {
-"": SubResource("AnimationLibrary_6yt0k")
+"": SubResource("AnimationLibrary_qnkfu")
 }
