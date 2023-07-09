@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 300
+@onready var hp = 200
 var pickup = 0
 
 func get_input():
@@ -16,3 +17,8 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
+	
+func takeHit(hit_damage):
+	hp -= hit_damage
+	print("taken hit")
+
