@@ -32,13 +32,11 @@ func _physics_process(delta):
 		$hitbox.position.x = 40
 	
 func idle():
-	print(nav_agent.distance_to_target())
 	if nav_agent.distance_to_target() < trigger_dist:
 		state = 1
 func seek():
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity = dir * speed
-	print(nav_agent.distance_to_target())
 	move_and_slide()
 	if nav_agent.distance_to_target() < attacK_dist:
 		state = 2
@@ -48,3 +46,5 @@ func recover():
 	anim.play('recover')
 func updateTarget(pos):
 	nav_agent.target_position = pos
+func hitAttack():
+	return hit_damage

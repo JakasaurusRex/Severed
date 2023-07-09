@@ -20,5 +20,10 @@ func _physics_process(delta):
 	
 func takeHit(hit_damage):
 	hp -= hit_damage
-	print("taken hit")
+	print("taken hit %s" % hp)
 
+func _on_player_area_area_entered(area):
+	if area.get_parent().has_method("hitAttack"):
+		takeHit(area.get_parent().hitAttack())
+	#elif area.get_parent().has_method("")
+	pass # Replace with function body.
