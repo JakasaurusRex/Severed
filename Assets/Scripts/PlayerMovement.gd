@@ -27,3 +27,7 @@ func _on_player_area_area_entered(area):
 		takeHit(area.get_parent().hitAttack())
 	elif area.get_parent().has_method("targetHit"):
 		takeHit(area.get_parent().targetHit())
+		
+func _input(event):
+	if event.is_action("Attack"):
+		$wep.attack()
