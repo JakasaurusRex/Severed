@@ -9,3 +9,25 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
+*.cfg
+*.ctex
+*.md5
+*.import
+*.tmp
+*.cfg
+*.cfg
+.godot/editor/filesystem_cache8
+.godot/editor/create_recent.Node
+.godot/editor/dialogue_box.tscn-editstate-ac793f82c2a909f5bfdcb98c67cc76a6.cfg
+.godot/editor/editor_layout.cfg
+.godot/editor/filesystem_cache8
+.godot/editor/filesystem_update4
+.godot/editor/player.tscn-editstate-9601e669bb72ca6c9a318a4e4b8c44f2.cfg
+.godot/editor/player.tscn-folding-9601e669bb72ca6c9a318a4e4b8c44f2.cfg
+.godot/editor/project_metadata.cfg
+.godot/editor/script_editor_cache.cfg
+.godot/editor/swash_sword.tscn-editstate-963e5b6d8de08d163cba485f9b7fc253.cfg
+.godot/editor/swash_sword.tscn-folding-963e5b6d8de08d163cba485f9b7fc253.cfg
+.godot/editor/throne_room.tscn-editstate-4555a79e2fbda909fdf050831fa186e6.cfg
+.godot/editor/throne_room.tscn-folding-4555a79e2fbda909fdf050831fa186e6.cfg
+.godot/uid_cache.bin
