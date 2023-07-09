@@ -10,7 +10,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(state)
 	#print(state)
 	#print(attack_start_angle)
 	match state:
@@ -23,8 +22,7 @@ func idle():
 	look_at(get_global_mouse_position())
 	$weaponAnim.play('idle')
 func attack():
-	
-	print("ATTACKING")
+
 	#print("%s,%s" % [attack_start_angle, attack_angle])
 	if state == 0:
 		state = 1

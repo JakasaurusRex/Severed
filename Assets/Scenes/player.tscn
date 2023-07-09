@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerMovement.gd" id="1_fr0if"]
 [ext_resource type="Texture2D" uid="uid://ctn5dr7wrtf0u" path="res://Assets/Sprites/temp_boss_smowl.png" id="2_6i64d"]
-[ext_resource type="PackedScene" uid="uid://ck2sbtbp5bb" path="res://Assets/Scenes/default_weapon.tscn" id="3_f3cju"]
+[ext_resource type="PackedScene" uid="uid://4hcaun5a1s86" path="res://Assets/Scenes/default_weapon.tscn" id="2_wcpuw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8p0b"]
 radius = 31.0
@@ -17,6 +17,9 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_fr0if")
 
+[node name="wep" parent="." instance=ExtResource("2_wcpuw")]
+position = Vector2(31, 12)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6i64d")
 
@@ -24,22 +27,15 @@ texture = ExtResource("2_6i64d")
 position = Vector2(0, 17)
 shape = SubResource("CapsuleShape2D_t8p0b")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-
 [node name="playerHitboxArea" type="Area2D" parent="."]
 position = Vector2(0, -2)
-collision_layer = 8
-collision_mask = 8
+collision_layer = 40
+collision_mask = 40
 
 [node name="playerHitboxCollision" type="CollisionShape2D" parent="playerHitboxArea"]
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_o22yk")
 debug_color = Color(0.92549, 0.180392, 0.517647, 0.419608)
-
-[node name="wep" parent="." instance=ExtResource("3_f3cju")]
-position = Vector2(30, 16)
 
 [node name="AbilityTimer" type="Timer" parent="."]
 

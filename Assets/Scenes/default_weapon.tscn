@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ck2sbtbp5bb"]
+[gd_scene load_steps=8 format=3 uid="uid://4hcaun5a1s86"]
 
 [ext_resource type="Texture2D" uid="uid://vtnb3t6jaqwg" path="res://Asperite FIles/temp_swashbuckle.png" id="2_8rg2j"]
 [ext_resource type="Script" path="res://Assets/Scripts/default_weapon.gd" id="2_243fo"]
@@ -85,6 +85,9 @@ tracks/5/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_dvdg6"]
+resource_name = "idle"
+
 [sub_resource type="Animation" id="Animation_ywg5q"]
 resource_name = "recover"
 tracks/0/type = "value"
@@ -99,9 +102,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [2, 0]
 }
-
-[sub_resource type="Animation" id="Animation_dvdg6"]
-resource_name = "idle"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qnkfu"]
 _data = {

@@ -59,16 +59,16 @@ func loadNextRoom():
 	last_room = room_scenes.pop_at(0).instantiate() # get next scene
 	add_child(last_room) # add scene
 	last_room.visible = true # show scene
+	last_room.door.connect(_on_level_template_door)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	dungeon = genRooms(dungeon)
+	$"Throne Room".door.connect(_on_level_template_door)
 	print(dungeon)
-		#room_scenes.append(preload('res://Assets/Scenes/level_template.tscn'))
-	#room_scenes.append(preload('res://Assets/Scenes/level_template.tscn'))
-	#loadNextRoom()
+	room_scenes.append(load('res://Assets/Scenes/level_template.tscn'))
 
 
-
-func _on_door_area_entered(area):
-	print('heyy')
+func _on_level_template_door():
+	print("OOIIII")
+	loadNextRoom()
