@@ -39,7 +39,7 @@ shape = SubResource("CapsuleShape2D_o22yk")
 debug_color = Color(0.92549, 0.180392, 0.517647, 0.419608)
 
 [node name="wep" parent="." instance=ExtResource("3_f3cju")]
-position = Vector2(35, 19)
+position = Vector2(30, 16)
 
 [node name="AbilityTimer" type="Timer" parent="."]
 

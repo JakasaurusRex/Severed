@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck7e04ajx3c5c"]
+[gd_scene load_steps=9 format=3 uid="uid://cjadelr6xafw3"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/sea_horse.gd" id="1_afdr3"]
 [ext_resource type="Texture2D" uid="uid://bifns2q55ml8u" path="res://Art/seahorse/horse_attack_sheet.png" id="2_ibs7p"]
