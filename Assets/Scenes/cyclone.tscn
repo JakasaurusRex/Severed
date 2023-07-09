@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ccd8ywgst3lxj"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/cyclone.gd" id="1_k7uen"]
-[ext_resource type="Texture2D" uid="uid://cwhbwntxp02v5" path="res://Asperite FIles/cyclone-Sheet.png" id="2_dh8r8"]
+[ext_resource type="Texture2D" uid="uid://bbg0fuvad0u1b" path="res://Asperite FIles/cyclone-Sheet.png" id="2_dh8r8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bpgxy"]
 radius = 27.0
