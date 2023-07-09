@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://4hcaun5a1s86"]
+[gd_scene load_steps=8 format=3 uid="uid://dcdll7t6pbapa"]
 
 [ext_resource type="Texture2D" uid="uid://vtnb3t6jaqwg" path="res://Asperite FIles/temp_swashbuckle.png" id="2_8rg2j"]
 [ext_resource type="Script" path="res://Assets/Scripts/default_weapon.gd" id="2_243fo"]
@@ -112,6 +112,7 @@ _data = {
 
 [node name="def" type="Node2D"]
 script = ExtResource("2_243fo")
+state = 2
 attack_angle = 0
 
 [node name="default_weapon" type="Sprite2D" parent="."]
@@ -120,12 +121,13 @@ offset = Vector2(30, 0)
 
 [node name="weaponHitbox" type="Area2D" parent="."]
 position = Vector2(30, 0)
-collision_layer = 0
-collision_mask = 8
+collision_layer = 16
+collision_mask = 16
 
 [node name="hitboxShape" type="CollisionShape2D" parent="weaponHitbox"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ldig0")
+disabled = true
 debug_color = Color(1, 0.00392157, 0.0745098, 0.419608)
 
 [node name="weaponAnim" type="AnimationPlayer" parent="."]

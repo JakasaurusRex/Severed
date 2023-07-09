@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcw0sd0gi0w7a"]
 
-[ext_resource type="TileSet" uid="uid://b1f1fiem4ie84" path="res://Art/tiles/tileset.tres" id="1_n7gfi"]
-[ext_resource type="Script" path="res://Assets/Scenes/level_template.gd" id="1_uiu8i"]
-[ext_resource type="PackedScene" uid="uid://c0fhfy7rlwja6" path="res://Assets/Scenes/door_scene.tscn" id="3_mxjdp"]
+[ext_resource type="TileSet" path="res://Art/tiles/tileset.tres" id="1_n7gfi"]
+[ext_resource type="Script" path="res://Assets/Scripts/level_template.gd" id="1_uiu8i"]
+[ext_resource type="PackedScene" uid="uid://dks0uypletoam" path="res://Assets/Scenes/door_scene.tscn" id="3_mxjdp"]
 [ext_resource type="PackedScene" uid="uid://dq88jq4x5vpv2" path="res://Assets/Scenes/player.tscn" id="4_kcvh0"]
 
 [node name="level_template" type="Node2D"]

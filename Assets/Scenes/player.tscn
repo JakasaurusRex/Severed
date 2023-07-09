@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerMovement.gd" id="1_fr0if"]
 [ext_resource type="Texture2D" uid="uid://ctn5dr7wrtf0u" path="res://Assets/Sprites/temp_boss_smowl.png" id="2_6i64d"]
-[ext_resource type="PackedScene" uid="uid://4hcaun5a1s86" path="res://Assets/Scenes/default_weapon.tscn" id="2_wcpuw"]
+[ext_resource type="PackedScene" uid="uid://dcdll7t6pbapa" path="res://Assets/Scenes/default_weapon.tscn" id="2_wcpuw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t8p0b"]
 radius = 31.0
