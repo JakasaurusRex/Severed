@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctvgy7hkysm4f"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/bubble.gd" id="1_01o6a"]
+[ext_resource type="Texture2D" uid="uid://coifv0w8asrre" path="res://Asperite FIles/bubble.png" id="1_eexca"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jmv0g"]
+radius = 11.0454
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4u86q"]
+radius = 11.0
+
+[node name="bub" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_01o6a")
+
+[node name="bubbleImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_eexca")
+
+[node name="bubCollider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_jmv0g")
+
+[node name="bubHitbox" type="Area2D" parent="."]
+position = Vector2(0, -1)
+collision_layer = 8
+collision_mask = 8
+
+[node name="bubHitboxShape" type="CollisionShape2D" parent="bubHitbox"]
+shape = SubResource("CircleShape2D_4u86q")
+debug_color = Color(0.921569, 0.227451, 0.407843, 0.419608)
+
+[node name="timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

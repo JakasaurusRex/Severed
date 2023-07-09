@@ -25,5 +25,5 @@ func takeHit(hit_damage):
 func _on_player_area_area_entered(area):
 	if area.get_parent().has_method("hitAttack"):
 		takeHit(area.get_parent().hitAttack())
-	#elif area.get_parent().has_method("")
-	pass # Replace with function body.
+	elif area.get_parent().has_method("targetHit"):
+		takeHit(area.get_parent().targetHit())

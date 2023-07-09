@@ -9,7 +9,7 @@ class_name defaultEnemy
 @onready var sprite = $enemySprite
 @onready var anim = $enemyAnim
 @onready var trigger_dist = 300
-@onready var attacK_dist = 50
+@onready var attack_dist = 50
 @onready var hit_damage = 10
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -38,7 +38,7 @@ func seek():
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity = dir * speed
 	move_and_slide()
-	if nav_agent.distance_to_target() < attacK_dist:
+	if nav_agent.distance_to_target() < attack_dist:
 		state = 2
 func attack():
 	anim.play('attack')

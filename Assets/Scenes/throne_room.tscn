@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://cso72pub2o58x"]
+[gd_scene load_steps=18 format=3 uid="uid://cso72pub2o58x"]
 
 [ext_resource type="Texture2D" uid="uid://dra0o0sl5c388" path="res://Art/tiles/all_tiles_sheet.png" id="1_6n4ss"]
 [ext_resource type="Script" path="res://Assets/Scripts/throne_room.gd" id="1_cqkoi"]
 [ext_resource type="PackedScene" uid="uid://dq88jq4x5vpv2" path="res://Assets/Scenes/player.tscn" id="3_p5hly"]
 [ext_resource type="Texture2D" uid="uid://b0kw0he8ut7i8" path="res://Assets/Sprites/throne.png" id="3_x408e"]
 [ext_resource type="PackedScene" uid="uid://cnoxnuahmblih" path="res://Assets/Scenes/default_enemy.tscn" id="4_2x2gb"]
+[ext_resource type="PackedScene" uid="uid://cjadelr6xafw3" path="res://Assets/Scenes/sea_horse.tscn" id="6_64tnb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_xa3im"]
 vertices = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -159,5 +160,8 @@ autostart = true
 
 [node name="default_enemy" parent="." instance=ExtResource("4_2x2gb")]
 position = Vector2(781, 406)
+
+[node name="sea_horse" parent="." instance=ExtResource("6_64tnb")]
+position = Vector2(793, 219)
 
 [connection signal="timeout" from="broadCastTimer" to="." method="_on_broad_cast_timer_timeout"]
