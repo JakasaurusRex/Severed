@@ -30,4 +30,5 @@ func _on_player_area_area_entered(area):
 		
 func _input(event):
 	if event.is_action("Attack"):
+		print("ATTACKACTIOn")
 		$wep.attack()
