@@ -1,8 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
 ::res://::1688857698
 icon.svg::CompressedTexture2D::7267113716773468220::1688787187::1688787200::1::::<><>::
-::res://Art/::1688847577
+::res://Art/::1688863487
 chatbox.png::CompressedTexture2D::8487443039760737297::1688797447::1688797563::1::::<><>::
+::res://Art/dolphin/::1688863520
+dolphin_attack_1.png::CompressedTexture2D::3659695474663739718::1688863487::1688863520::1::::<><>::
+dolphin_attack_2.png::CompressedTexture2D::8949371635598722998::1688863487::1688863520::1::::<><>::
+dolphin_attack_3.png::CompressedTexture2D::7653595858229689088::1688863487::1688863520::1::::<><>::
+dolphin_attack_4.png::CompressedTexture2D::8472496974199391953::1688863487::1688863520::1::::<><>::
+dolphin_attack_5.png::CompressedTexture2D::7941890165528209578::1688863487::1688863520::1::::<><>::
+dolphin_attack_6.png::CompressedTexture2D::4094232206851766391::1688863487::1688863520::1::::<><>::
+dolphin_attack_sheet.png::CompressedTexture2D::6504749206465139352::1688863487::1688863520::1::::<><>::
 ::res://Art/tiles/::1688857698
 all_tiles_sheet.png::CompressedTexture2D::-1::1688857698::1688857698::1::::<><>::
 rock_1.png::CompressedTexture2D::1520076644425887515::1688847577::1688857698::1::::<><>::
@@ -13,7 +21,7 @@ tile_2.png::CompressedTexture2D::9114098515819021128::1688847577::1688857698::1:
 tile_3.png::CompressedTexture2D::2176620596717889661::1688847577::1688857698::1::::<><>::
 tile_4.png::CompressedTexture2D::3589031104654318454::1688847577::1688857698::1::::<><>::
 tile_5.png::CompressedTexture2D::1319654294043797126::1688847577::1688857698::1::::<><>::
-::res://Asperite FIles/::1688857755
+::res://Asperite FIles/::1688864325
 blob.png::CompressedTexture2D::5292806622648571677::1688840905::1688846203::1::::<><>::
 blob_large.png::CompressedTexture2D::4070648251324499900::1688840913::1688846203::1::::<><>::
 bubble.png::CompressedTexture2D::5772342635556516282::1688851883::1688861054::1::::<><>::
@@ -24,24 +32,29 @@ eel.png::CompressedTexture2D::4025533730197487599::1688839167::1688846203::1::::
 eel_large.png::CompressedTexture2D::2176948396647379164::1688839198::1688846203::1::::<><>::
 jelly.png::CompressedTexture2D::6687209598344980935::1688842783::1688846203::1::::<><>::
 jelly_large.png::CompressedTexture2D::8258358514420086385::1688842765::1688846203::1::::<><>::
+marlin_attack_sheet.png::CompressedTexture2D::7514326864065816679::1688863459::1688863520::1::::<><>::
 seabear.png::CompressedTexture2D::2464619188432556417::1688840360::1688846203::1::::<><>::
 seabear_large.png::CompressedTexture2D::9061514702713444175::1688840370::1688846203::1::::<><>::
 seaweed.png::CompressedTexture2D::4090678654731971647::1688852684::1688861054::1::::<><>::
 seaweed_large.png::CompressedTexture2D::224060892167034009::1688852693::1688861054::1::::<><>::
 sharkie.png::CompressedTexture2D::7300760842748852865::1688851730::1688861054::1::::<><>::
 sharkie_large.png::CompressedTexture2D::5114506755724472736::1688851722::1688861054::1::::<><>::
+stingray-Sheet.png::CompressedTexture2D::8832920757654432256::1688864325::1688864327::1::::<><>::
 stingray.png::CompressedTexture2D::1159496937327294426::1688838336::1688846203::1::::<><>::
 stingray_large.png::CompressedTexture2D::2105332915093956724::1688838362::1688846203::1::::<><>::
 throne.png::CompressedTexture2D::4252790016980909801::1688844163::1688846203::1::::<><>::
 throne_large.png::CompressedTexture2D::3536992863961155542::1688844198::1688846203::1::::<><>::
 ::res://Assets/::1688803058
-::res://Assets/Scenes/::1688857698
+::res://Assets/Scenes/::1688863487
+default_enemy.tscn::PackedScene::-1::1688863487::0::1::::<><>::
 player.tscn::PackedScene::8352428634337109961::1688852111::0::1::::<><>::res://Assets/Scripts/PlayerMovement.gd<>uid://ctn5dr7wrtf0u::::res://Assets/Sprites/temp_boss_smowl.png<>res://Assets/Scripts/Attack ball.gd
 swash_sword.gd::GDScript::-1::1688857697::0::1::::<>Node2D<>::
 swash_sword.tscn::PackedScene::4814835558292862886::1688852111::0::1::::<><>::res://Assets/Scripts/swash_sword.gd<>uid://cg5mjmqypmhmd::::res://Assets/Sprites/temp_swashbuckle.png
 throne_room.tscn::PackedScene::6067133820460023985::1688852111::0::1::::<><>::uid://b0kw0he8ut7i8::::res://Assets/Sprites/throne.png
-::res://Assets/Scripts/::1688857697
-PlayerMovement.gd::GDScript::-1::1688857697::0::1::::<>CharacterBody2D<>::
+::res://Assets/Scripts/::1688863487
+default_enemy.gd::GDScript::-1::1688863487::0::1::::defaultEnemy<>CharacterBody2D<>::
+PlayerMovement.gd::GDScript::-1::1688863487::0::1::::<>CharacterBody2D<>::
+throne_room.gd::GDScript::-1::1688863487::0::1::::<>Node2D<>::
 ::res://Assets/Sprites/::1688845801
 temp_boss2.png::CompressedTexture2D::953564778028651399::1688802764::1688802764::1::::<><>::
 temp_boss2low.png::CompressedTexture2D::8981121064742639807::1688802924::1688802924::1::::<><>::
