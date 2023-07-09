@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck2sbtbp5bb"]
+
+[ext_resource type="Texture2D" uid="uid://cg5mjmqypmhmd" path="res://Assets/Sprites/temp_swashbuckle.png" id="1_d5g01"]
+[ext_resource type="Script" path="res://Assets/Scripts/default_weapon.gd" id="2_243fo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ldig0"]
+height = 84.0
+
+[sub_resource type="Animation" id="Animation_0m03m"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -30), Vector2(0, -50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../hitbox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -19), Vector2(0, -39)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6yt0k"]
+_data = {
+"attack": SubResource("Animation_0m03m")
+}
+
+[node name="def" type="Node2D"]
+
+[node name="default_weapon" type="Sprite2D" parent="."]
+position = Vector2(0, -19)
+texture = ExtResource("1_d5g01")
+offset = Vector2(0, -50)
+script = ExtResource("2_243fo")
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2(0, -39)
+collision_layer = 0
+collision_mask = 8
+
+[node name="hitboxShape" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -30)
+shape = SubResource("CapsuleShape2D_ldig0")
+
+[node name="weaponAnim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../default_weapon")
+libraries = {
+"": SubResource("AnimationLibrary_6yt0k")
+}
